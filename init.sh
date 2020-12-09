@@ -23,7 +23,6 @@ sed -e "s/MY_APP_NAME/${app_name}/g" tmp/build/python/project/urls.py > src/$pro
 sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/models.py > src/$app_name/models.py
 sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/admin.py > src/$app_name/admin.py
 sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/views.py > src/$app_name/views.py
-sed -e "s/MY_APP_NAME/${app_name}/g" tmp/build/python/project/urls.py > src/$app_name/urls.py
 cp -r tmp/build/python/app/templates src/$app_name/templates
 
 docker-compose run $service_name ./manage.py makemigrations
