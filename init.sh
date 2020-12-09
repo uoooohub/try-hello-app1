@@ -10,7 +10,7 @@ sed -e "s/MY_PROJECT_NAME/${site_name}/g" tmp/build/python/Dockerfile > python/D
 sed -i -e "s/MY_APP_NAME/${app_name}/g" python/Dockerfile
 
 ## build
-docker-compose build $service_name ./python
+docker build ./python
 docker-compose run $service_name django-admin startproject $project_name .
 docker-compose run $service_name ./manage.py startapp $app_name
 
