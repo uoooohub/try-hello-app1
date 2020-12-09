@@ -18,3 +18,9 @@ def sub_index(request):
         "message": "こんにちわ",
     }
     return render(request, "sub.html", d)
+
+def sub2_index(request):
+   d = {
+       'range': range(10),
+   }
+   return render(request, 'sub2.html', d)
