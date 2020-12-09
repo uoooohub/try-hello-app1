@@ -5,4 +5,5 @@ urlpatterns = [
    path('', views.index),
    path('sub',views.sub_index),
    path('sub2',views.sub2_index),
+   path('sub3',view.get_query),
 ]

@@ -1,0 +1,9 @@
+{% block body %}
+    <form action="" method="get">
+        <label>名前:<input type="text" size="20" name="name"></label>
+        <input type="submit" value="送信">
+    </form>
+    {% if name %}
+        {{ name }}さん、こんにちは。
+    {% endif %}
+{% endblock %}

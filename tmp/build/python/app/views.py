@@ -24,3 +24,9 @@ def sub2_index(request):
        'range': range(10),
    }
    return render(request, 'sub2.html', d)
+
+def get_query(request):
+   d = {
+       'name': request.GET.get('name')
+   }
+   return render(request, 'sub3.html', d)
