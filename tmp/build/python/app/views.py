@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime
-from forms import HelloForm
+from . import forms
 
 # Create your views here.
 def index(request):
@@ -35,12 +35,12 @@ def get_query(request):
 def hello_form(request):
    params = {"your_name": "", "email": "", "age": "", "gender": "", "form": None}
    if request.method == "POST":
-       form = HelloForm(request.POST)
+       form = forms.HelloForm(request.POST)
        params["your_name"] = request.POST["your_name"]
        params["email"] = request.POST["email"]
        params["age"] = request.POST["age"]
        params["gender"] = request.POST["gender"]
        params["form"] = form
    else:
-       params["form"] = HelloForm()
+       params["form"] = forms.HelloForm()
    return render(request, "forms.html", params)
