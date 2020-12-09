@@ -1,6 +1,6 @@
 git clone https://github.com/uoooohub/try-hello-app1.git . \
 && bash create_requirements.sh ./python 'Django==3.1.4' 'requests' 'bs4' \
-&& bash init.sh 'web' 'hello_project' 'hello_app' 'Hello'
+&& bash init.sh 'web' 'hello_project' 'hello_app'
 
 
 # git clone https://github.com/uoooohub/try-hello-app1.git . \
