@@ -28,8 +28,11 @@ sed -i -e "s/MY_APP_NAME/${app_name}/g" src/$app_name/urls.py
 
 cp -r tmp/build/python/app/templates src/$app_name/templates
 
+# migrate
 docker-compose run $service_name ./manage.py makemigrations
 docker-compose run $service_name ./manage.py migrate
+
+# create admin
 #docker-compose run $service_name ./manage.py createsuperuser
 
 docker-compose up
