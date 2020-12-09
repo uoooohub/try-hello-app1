@@ -23,7 +23,7 @@ sed -i -e "s/MY_APP_NAME/${app_name}/g" src/$project_name/urls.py
 sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/models.py > src/$app_name/models.py
 sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/admin.py > src/$app_name/admin.py
 sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/views.py > src/$app_name/views.py
-sed -e "s/MY_PROJECT_NAME/${project_name}/g" tmp/build/python/app/urls.py > src/$project_name/urls.py
+sed -e "s/MY_PROJECT_NAME/${project_name}/g" tmp/build/python/app/urls.py > src/$app_name/urls.py
 sed -i -e "s/MY_APP_NAME/${app_name}/g" src/$app_name/urls.py
 
 cp -r tmp/build/python/app/templates src/$app_name/templates
