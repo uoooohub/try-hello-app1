@@ -11,3 +11,10 @@ def index(request):
         "message": "良いお天気ですね"
     }
     return render(request, "index.html", d)
+
+def sub_index(request):
+    d = {
+        "name": "田村",
+        "message": "こんにちわ",
+    }
+    return render(request, "sub.html", d)
