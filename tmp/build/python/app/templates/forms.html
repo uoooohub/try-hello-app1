@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>フォーム</title>
+</head>
+<body>
+   <h1>入力フォーム</h1>
+   <form method="POST">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit">送信</button>
+   </form>
+
+   <h2>以下は、あなたの個人情報です</h2>
+   名前：{{ your_name }}<br>
+   メールアドレス：{{ email }}<br>
+   年齢：{{ age }}<br>
+   性別：{{ gender }}<br>
+</body>
+</html>

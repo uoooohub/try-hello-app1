@@ -30,3 +30,16 @@ def get_query(request):
        'name': request.GET.get('name')
    }
    return render(request, 'sub3.html', d)
+
+def hello_form(request):
+   params = {"your_name": "", "email": "", "age": "", "gender": "", "form": None}
+   if request.method == "POST":
+       form = HelloForm(request.POST)
+       params["your_name"] = request.POST["your_name"]
+       params["email"] = request.POST["email"]
+       params["age"] = request.POST["age"]
+       params["gender"] = request.POST["gender"]
+       params["form"] = form
+   else:
+       params["form"] = HelloForm()
+   return render(request, "forms.html", params)
