@@ -25,6 +25,6 @@ sed -i -e "s/MY_APP_INSTALLED/${app_name}/g" python/project/settings.py
 
 docker-compose run $service_name ./manage.py makemigrations
 docker-compose run $service_name ./manage.py migrate
-docker-compose run $service_name ./manage.py createsuperuser
+#docker-compose run $service_name ./manage.py createsuperuser
 
 docker-compose up
