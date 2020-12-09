@@ -17,10 +17,10 @@ docker-compose run $service_name django-admin startproject $project_name .
 #sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/models.py > python/app/models.py
 #sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/admin.py > python/app/admin.py
 #sed -e "s/MY_APP_CLASS_NAME/${app_class_name}/g" tmp/build/python/app/views.py > python/app/views.py
-sed -e "s/MY_PROJECT_NAME/${site_name}/g" tmp/build/python/project/settings.py > project/settings.py
-sed -e "s/MY_APP_INSTALLED/${app_name}/g" tmp/build/python/project/settings.py > 
-#sed -e "s/MY_PROJECT_NAME/${site_name}/g" tmp/build/python/project/urls.py > 
-#sed -e "s/MY_APP_NAME/${app_name}/g" tmp/build/python/project/urls.py > 
+sed -e "s/MY_PROJECT_NAME/${site_name}/g" tmp/build/python/project/settings.py > python/project/settings.py
+sed -i -e "s/MY_APP_INSTALLED/${app_name}/g" python/project/settings.py
+#sed -e "s/MY_PROJECT_NAME/${site_name}/g" tmp/build/python/project/urls.py > python/project/urls.py
+#sed -e "s/MY_APP_NAME/${app_name}/g" tmp/build/python/project/urls.py > python/project/urls.py
 
 
 
