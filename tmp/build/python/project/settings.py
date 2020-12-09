@@ -64,6 +64,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+           'libraries': {
+               'poll_extrtas': 'MY_APP_NAME.templatetags.poll_extrtas'
+           }
         },
     },
 ]

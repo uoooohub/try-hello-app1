@@ -33,13 +33,15 @@ def get_query(request):
    return render(request, 'sub3.html', d)
 
 def hello_form(request):
-   params = {"your_name": "", "email": "", "age": "", "gender": "", "form": None}
+   params = {"your_name": "", "email": "", "age": "", "gender": "", "salary": "", "form": None}
    if request.method == "POST":
        form = forms.HelloForm(request.POST)
        params["your_name"] = request.POST["your_name"]
        params["email"] = request.POST["email"]
        params["age"] = request.POST["age"]
        params["gender"] = request.POST["gender"]
+       params["salary"] = request.POST["salary"]
+       params["salary"] = int(params["salary"])
        params["form"] = form
    else:
        params["form"] = forms.HelloForm()

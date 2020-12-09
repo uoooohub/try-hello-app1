@@ -15,6 +15,7 @@ docker-compose run $service_name ./manage.py startapp $app_name
 
 ## 各種projectとappのファイルや設定の構築
 sed -e "s/MY_PROJECT_NAME/${project_name}/g" tmp/build/python/project/settings.py > src/$project_name/settings.py
+sed -i -e "s/MY_APP_NAME/${app_name}/g" src/$project_name/settings.py
 sed -i -e "s/MY_APP_INSTALLED/${app_name}/g" src/$project_name/settings.py
 sed -e "s/MY_PROJECT_NAME/${project_name}/g" tmp/build/python/project/urls.py > src/$project_name/urls.py
 sed -i -e "s/MY_APP_NAME/${app_name}/g" src/$project_name/urls.py

@@ -13,3 +13,4 @@ class HelloForm(forms.Form):
    email = forms.EmailField(label="メール", max_length=100)
    age = forms.IntegerField(label="年齢", min_value=0, max_value=120)
    gender = forms.ChoiceField(label="性別", widget=forms.Select, choices=EMPTY_CHOICES + GENDER_CHOICES, required=True)
+   salary = forms.IntegerField(label="月収", min_value=None, max_value=None)
